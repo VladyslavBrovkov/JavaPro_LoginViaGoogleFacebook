@@ -7,6 +7,21 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript">
+        if (window.location.hash && window.location.hash == '#_=_') {
+            if (window.history && history.pushState) {
+                window.history.pushState("", document.title, window.location.pathname);
+            } else {
+                var scroll = {
+                    top: document.body.scrollTop,
+                    left: document.body.scrollLeft
+                };
+                window.location.hash = '';
+                document.body.scrollTop = scroll.top;
+                document.body.scrollLeft = scroll.left;
+            }
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
